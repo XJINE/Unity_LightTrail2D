@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PartialBloom
+  m_Name: Bloom
   m_Shader: {fileID: 4800000, guid: 40f048fbbc21eab45b65b07a60880784, type: 3}
   m_ShaderKeywords: _DITHER_BAYER _DITHER_TYPE_BAYER _TYPE_BAYER _TYPE_DITHER_DOT
   m_LightmapFlags: 4

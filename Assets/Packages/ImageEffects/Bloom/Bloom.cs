@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class PartialBloom : ImageEffectBase
+public class Bloom : ImageEffectBase
 {
     #region Enum
 
@@ -27,7 +27,7 @@ public class PartialBloom : ImageEffectBase
         { CompositeType._COMPOSITE_TYPE_DEBUG,            CompositeType._COMPOSITE_TYPE_DEBUG.ToString()            }
     };
 
-    public PartialBloom.CompositeType compositeType = PartialBloom.CompositeType._COMPOSITE_TYPE_ADDITIVE;
+    public Bloom.CompositeType compositeType = Bloom.CompositeType._COMPOSITE_TYPE_ADDITIVE;
 
     [Range(0, 1)]
     public float threshold = 1;
@@ -92,7 +92,7 @@ public class PartialBloom : ImageEffectBase
         // STEP:3
         // Composite.
 
-        base.material.EnableKeyword(PartialBloom.CompositeTypes[this.compositeType]);
+        base.material.EnableKeyword(Bloom.CompositeTypes[this.compositeType]);
         base.material.SetColor(this.idCompositeColor, this.color);
         base.material.SetTexture(this.idCompositeTex, resizedTex1);
 
@@ -101,7 +101,7 @@ public class PartialBloom : ImageEffectBase
         // STEP:4
         // Close.
 
-        base.material.DisableKeyword(PartialBloom.CompositeTypes[this.compositeType]);
+        base.material.DisableKeyword(Bloom.CompositeTypes[this.compositeType]);
 
         RenderTexture.ReleaseTemporary(resizedTex1);
         RenderTexture.ReleaseTemporary(resizedTex2);
